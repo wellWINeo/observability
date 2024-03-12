@@ -1,0 +1,20 @@
+### Get all health issues
+GET {{url}}/api/health-issues
+
+
+### Create health issue
+POST {{url}}/api/health-issues
+Content-Type: application/json
+X-ADMIN-TOKEN: {{adminToken}}
+
+{
+  "title": "Hip Dysplasia",
+  "suggestion": "Consult a veterinarian for proper diagnosis and treatment options. Consider joint supplements and controlled exercise.",
+  "isCritical": true
+}
+
+
+### Delete health issue
+DELETE {{url}}/api/health-issues/1
+X-ADMIN-TOKEN: {{adminToken}}
+

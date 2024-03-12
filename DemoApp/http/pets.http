@@ -1,0 +1,20 @@
+
+### Get pet by id
+GET http://localhost:5017/api/pets/1
+
+### Get pet by name
+GET http://localhost:5017/api/pets?name=сугроб
+
+### Create pet
+POST http://localhost:5017/api/pets/
+Content-Type: application/json
+
+{
+    "nickName": "nigger",
+    "age": 5,
+    "gender": 0,
+    "breedId": 1
+}
+
+### Get all breeds
+GET http://localhost:5017/api/breeds/

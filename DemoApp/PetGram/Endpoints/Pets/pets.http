@@ -1,0 +1,37 @@
+
+### Create pet
+POST {{url}}/api/pets
+Content-Type: application/json
+
+{
+  "nickName": "Buddy",
+  "age": 3,
+  "gender": 0,
+  "breedId": 3
+}
+
+
+### Get pet by id
+GET {{url}}/api/pets/2
+
+
+### Get pets by name
+@nameQuery=Buddy
+GET {{url}}/api/pets?name={{nameQuery}}
+
+
+### Update pet
+PUT {{url}}/api/pets/11
+Content-Type: application/json
+
+{
+  "nickName": "Luna",
+  "age": 2,
+  "gender": 1,
+  "breedId": 3
+}
+
+
+
+### Delete pet
+DELETE {{url}}/api/pets/1

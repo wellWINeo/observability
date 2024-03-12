@@ -1,0 +1,37 @@
+### Create breed
+POST {{url}}/api/breeds
+Content-Type: application/json
+
+{
+  "name": "Labrador Retriever",
+  "description": "A friendly and retriever breed, known for its intelligence and loyalty.",
+  "country": "Canada",
+  "size": 2,
+  "lifeSpan": 12,
+  "temperamentDescription": "Gentle, intelligent, and good-natured",
+  "healthIssueIds": [3],
+  "speciesId": 3
+}
+
+
+### Retrieve all breeds
+GET {{url}}/api/breeds
+
+### Update breed
+PUT {{url}}/api/breeds/2
+Content-Type: application/json
+
+{
+  "name": "Persian Cat",
+  "description": "An affectionate and regal breed known for its long fur and sweet disposition.",
+  "country": "Iran",
+  "size": 1,
+  "lifeSpan": 15,
+  "temperamentDescription": "Calm, gentle, and affectionate",
+  "healthIssueIds": [3],
+  "speciesId": 3
+}
+
+### Delete breed
+DELETE {{url}}/api/species/2
+X-ADMIN-TOKEN: {{adminToken}}

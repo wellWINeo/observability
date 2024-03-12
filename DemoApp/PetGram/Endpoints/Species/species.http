@@ -1,0 +1,29 @@
+### Create species
+POST {{url}}/api/species
+Content-Type: application/json
+X-ADMIN-TOKEN: {{adminToken}}
+
+{
+  "Name": "Golden Retriever",
+  "Description": "Friendly and intelligent dog breed, known for its golden-colored fur and gentle temperament."
+}
+
+
+### Retrieve all species
+GET {{url}}/api/species
+
+
+### Update species
+PUT {{url}}/api/species/1
+Content-Type: application/json
+X-ADMIN-TOKEN: {{adminToken}}
+
+{
+  "Name": "Siamese Cat",
+  "Description": "A sleek and elegant breed known for its striking blue eyes and distinctive color points."
+}
+
+
+### Delete species
+DELETE {{url}}/api/species/1
+X-ADMIN-TOKEN: {{adminToken}}
