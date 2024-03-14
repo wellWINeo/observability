@@ -1,0 +1,16 @@
+﻿@url=http://localhost:5020
+
+### NoLog
+GET {{url}}/increment/no-log/99
+
+### StdLog
+GET {{url}}/increment/std-log/99
+
+### SourceGenLog
+GET {{url}}/increment/sourcegen-log/99
+
+### DefinedLog
+GET {{url}}/increment/defined-log/99
+
+### SupressLog
+GET {{url}}/increment/suppress-log/99
