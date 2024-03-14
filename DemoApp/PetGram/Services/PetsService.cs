@@ -1,5 +1,6 @@
 ﻿using EntityFramework.Exceptions.Common;
 using PetGram.Core.Exceptions;
+using PetGram.Core.Logging;
 using PetGram.Core.Models;
 using PetGram.Data.Repositories;
 
@@ -11,7 +12,11 @@ public class PetsService(
 {
     public async Task<Pet> CreatePet(Pet pet)
     {
-        logger.LogInformation($"Creating pet with name {pet.NickName}");
+        logger.LogInformation(
+            eventId: ApplicationEventId.CreatePet,
+            message: "Creating pet with nickname({nickName})", 
+            args: pet.NickName
+        );
 
         if (pet.NickName == "nigger")
         {

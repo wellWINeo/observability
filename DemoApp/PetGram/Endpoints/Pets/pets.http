@@ -4,10 +4,10 @@ POST {{url}}/api/pets
 Content-Type: application/json
 
 {
-  "nickName": "Buddy",
+  "nickName": "Luna",
   "age": 3,
   "gender": 0,
-  "breedId": 3
+  "breedId": 5
 }
 
 
