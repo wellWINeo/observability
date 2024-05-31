@@ -4,11 +4,11 @@ using LoggingBenchmark;
 using Microsoft.Extensions.Logging;
 
 [SimpleJob(RuntimeMoniker.Net80)]
-public class LoggingBenchMark
+public class LoggingInterfacesBenchMark
 {
     private readonly ILoggerFactory _loggerFactory;
 
-    public LoggingBenchMark(ILoggerFactory loggerFactory)
+    public LoggingInterfacesBenchMark(ILoggerFactory loggerFactory)
     {
         _loggerFactory = LoggerFactory.Create(logging => logging.AddConsole());
     }
@@ -24,7 +24,7 @@ public class LoggingBenchMark
     [Benchmark]
     public int StandardLog()
     {
-        var logger = _loggerFactory.CreateLogger<LoggingBenchMark>();
+        var logger = _loggerFactory.CreateLogger<LoggingInterfacesBenchMark>();
 
         var number = 1 + 2;
         
@@ -36,7 +36,7 @@ public class LoggingBenchMark
     [Benchmark]
     public int SourceGeneratedLog()
     {
-        var logger = _loggerFactory.CreateLogger<LoggingBenchMark>();
+        var logger = _loggerFactory.CreateLogger<LoggingInterfacesBenchMark>();
         
         var number = 1 + 2;
 
@@ -48,7 +48,7 @@ public class LoggingBenchMark
     [Benchmark]
     public int SuppressLog()
     {
-        var logger = _loggerFactory.CreateLogger<LoggingBenchMark>();
+        var logger = _loggerFactory.CreateLogger<LoggingInterfacesBenchMark>();
 
         var number = 1 + 2;
 
