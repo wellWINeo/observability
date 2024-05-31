@@ -33,6 +33,8 @@ builder.Services.AddLogging(logging =>
             NodeUris = [new("http://localhost:9200")]
         };
     });
+
+    logging.AddFilter("Microsoft.AspNetCore", LogLevel.Warning);
 });
 
 builder.Services

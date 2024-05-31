@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Logging Best practices</title>
+    <link rel="stylesheet" href="/dist/reset.css">
+    <link rel="stylesheet" href="/dist/reveal.css">
+    <link rel="stylesheet" href="/dist/theme/white.css">
+    <link rel="stylesheet" href="/plugin/highlight/atome-one-light.css">
+</head>
+
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-transform: unset !important;
+    }
+
+    .slides {
+        font-size: 30px !important;
+    }
+
+    code {
+        max-height: 75vh !important;
+        font-size: 14px;
+    }
+
+    .side-by-side {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+</style>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-markdown="slides.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$"></section>
+        </div>
+    </div>
+
+    <script src="/dist/reveal.js"></script>
+    <script src="/plugin/notes/notes.js"></script>
+    <script src="/plugin/markdown/markdown.js"></script>
+    <script src="/plugin/highlight/highlight.js"></script>
+    <script src="/plugin/mermaid/mermaid.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            mermaid: {
+            },
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid]
+        });
+    </script>
+</body>
+
+</html>
