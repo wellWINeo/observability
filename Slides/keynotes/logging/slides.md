@@ -162,7 +162,7 @@ public class ExceptionFilter(ILogger<ExceptionFilter> logger) : IEndpointFilter
 
 - Исключения. Какие и как разобрались
 - Доменные события (мутация данных, действия пользователя)
-- Технические данные для возможного дебага (с `LogLevel.Debug` или `LogLevel.Trace`)
+- Технические данные для возможного дебага (с LogLevel.Debug или LogLevel.Trace)
 
 ---
 
@@ -174,8 +174,7 @@ public class ExceptionFilter(ILogger<ExceptionFilter> logger) : IEndpointFilter
 
 ```
 [2022-01-20 15:45:27] ERROR: Failed to update entity with ID 1234:
-Database constraint violation - Duplicate entry 'example@example.com'
-for key 'email_unique'.
+Database constraint violation - Duplicate entry 'example@example.com' for key 'email_unique'.
 ```
 
 --
